@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'PoorStory';
+    src: url('font/poorstory.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jua';
+    src: url('font/jua.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BM Hanna';
+    src: url('font/bm_hanna.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    position: relative;
+    width: 375px;
+    height: 812px;
+    overflow: hidden;
+    background-color: #FBD962;
+    border-radius: 30px;
+}
+
+#nugget {
+    z-index: 1; /* nugget을 최상위로 설정 */
+    position: absolute;
+    bottom: 100px;
+    left: 140px;
+    width: 100px;
+    height: 100px;
+}
+
+#fork,#fork2 {
+    z-index: 1; /* 포크를 점수보다 뒤에 배치 */
+    position: absolute;
+    width: 100px;
+    height: 110px;
+}
+
+#pan {
+    position: absolute;
+    margin-top: 450px;
+    width: 800px;
+    height: 500px;
+    margin-left: -70px;
+}
+
+#ketchapp,#mustard {
+    z-index: 1; /* 소금을 점수보다 뒤에 배치 */
+    width: 50px;
+    height: 60px;
+    position: absolute;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+    z-index: 2; /* 점수를 가장 앞에 배치 */
+    font-family: 'Jua',sans-serif;
+}
+
+#high-score {
+    z-index: 2; /* high score를 점수와 동일하게 앞에 배치 */
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 18px;
+    color: #555;
+    font-family: 'Jua',sans-serif;
+}
+
+/*프레임*/
+.frame{
+    position: absolute;
+    right: 616px;
+    width: 360px;
+    z-index: 1500;
+    transform: scaleX(0.98); 
+    transform-origin: center;
+    pointer-events: none;
+}
+
+#game-over {
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    color: #333;
+    display: none;
+    font-family: 'Jua',sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+#restart-button,#home-button {
+    position: absolute;
+    top: 380px;
+    left: 236px;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 80px;
+    height: 80px;
+}
+#home-button {
+    left: 137px;
+}

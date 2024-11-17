@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>home</title>
+    <meta http-equiv="refresh" content="3;url=login.html">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="common_img/header.svg" alt="Header">
+        </div>
+        <img src="common_img/nugget_text.svg" width="240" height="76" alt="nugget-text" class="nugget-text">
+    </div>
+
+    <script>
+        // 페이지 로드 후 일정 시간 뒤에 페이드아웃 효과를 적용
+        window.onload = function () {
+            const container = document.querySelector('.container'); // 페이드아웃 적용할 요소
+            setTimeout(() => {
+                container.classList.add('fade-out'); // 페이드아웃 애니메이션 추가
+            }, 2000); // 2초 후 페이드아웃 시작
+
+            // 페이드아웃이 끝난 뒤 페이지 이동
+            setTimeout(() => {
+                window.location.href = "login.html"; // 이동할 페이지
+            }, 3000); // 페이드아웃 1초 후 이동
+        };
+
+    </script>
+
+</body>
+
+</html>

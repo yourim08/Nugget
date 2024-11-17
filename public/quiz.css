@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'PoorStory';
+    src: url('font/poorstory.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jua';
+    src: url('font/jua.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BM Hanna';
+    src: url('font/bm_hanna.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Khula-Regular';
+    src: url('font/Khula-Regular.ttf') format('truetype');
+}
+
+
+/*프레임*/
+.frame{
+    position: absolute;
+    right: 616px;
+    width: 360px;
+    z-index: 1500;
+    transform: scaleX(0.98); 
+    transform-origin: center;
+    pointer-events: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    width: 375px;
+    height: 812px;
+    background-color: #FFBB38;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.header img {
+    position: absolute;
+    width: 100%;
+    margin-top: 4px;
+}
+.nugget-text {
+    position: absolute;
+    margin-top: 4px;
+    width: 116px;
+    height: 37px;
+    margin-left: 125px;
+}
+.curious{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 298px;
+    width: 174px;
+    height: 124px;
+}
+.quiz_talk {
+    position: absolute;
+
+}
+.rectangles {
+    position: absolute;
+    gap: 13px;
+    display: flex;
+    justify-content: center;
+    margin-top: 410px;
+}
+.rectangle {     
+    width: 108px;
+    height: 129px;
+    background-color: #FFF7B3;
+    border-radius: 15px;
+    display: flex;         /* flexbox 사용 */
+    justify-content: center;  /* 수평 가운데 정렬 */
+    align-items: center;   /* 수직 가운데 정렬 */
+    font-size: 16px;       /* 글자 크기 조정 */
+    font-weight: bold;     /* 글자 굵게 */
+    text-align: center;    /* 텍스트 가운데 정렬 */
+    cursor: pointer;      /* 마우스 커서 스타일 */
+}
+.talk {
+    position: absolute;
+    margin-top: 146px;
+    margin-left: 41px;
+}
+.text {
+    z-index: 1;
+    position: absolute;
+    font-size: 18px;
+    width: 290px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Khula-Regular';
+}   
+.button {
+    position: absolute;
+    margin-left: 79px;
+    border-radius: 8px;
+    width: 218px;
+    height: 42px;
+    background-color: #FFF7B3;
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.stop {
+    margin-top: 609px;
+}
+
+.continue {
+    margin-top: 555px;
+}
+
+.question {
+    z-index: 1;
+    font-size: 18px;
+    width: 290px;
+    margin-top: 50px;
+    text-align: center;
+    position: absolute;
+}
+.result-image {
+    margin-top: 146px;
+    margin-left: 89px;
+}
+.rectangle:hover {
+    border: 2px solid black
+    ;  /* hover 시 파란색 선 추가 */
+}
+
+.selected {
+    border: 2px solid black; /* 정답 선택 시 초록색 선 추가 */
+}
+
+.rectangle.selected:hover {
+    border: 2px solid black;  /* 선택된 항목 hover 시에도 초록색 선 유지 */
+}

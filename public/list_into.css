@@ -1,0 +1,90 @@
+/*폰트*/
+@font-face {
+    font-family: 'PoorStory';
+    src: url('font/poorstory.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jua';
+    src: url('font/jua.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BM Hanna';
+    src: url('font/bm_hanna.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gowun Dodum';
+    src: url('font/gowundodum.ttf') format('truetype');
+}
+
+/*프레임*/
+.frame{
+    position: absolute;
+    right: 616px;
+    width: 360px;
+    z-index: 1500;
+    transform: scaleX(0.98); 
+    transform-origin: center;
+    pointer-events: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 375px;
+    height: 812px;
+    background-color: #F3D054;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.know_talk {
+    position: absolute;
+    left: 24px;
+    top: 200px;
+}
+
+.complete_button {
+    position: absolute;
+    left: 117px;
+    top: 685px;
+}
+
+.complete_button a {
+    transition: transform 0.1s, opacity 0.1s;
+}
+
+.complete_button a:active {
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+.know_talk {
+    position: absolute;
+}
+.content {
+    position: absolute;
+    font-family: 'Gowun Dodum';
+    margin-top: -380px;
+    font-size: 20px;
+    width: 294px;
+    height: 314px;
+    margin-left: 18px;
+}
+.title2{
+    position: absolute;
+    font-family: 'Gowun Dodum';
+    margin-top: -435px;
+    color: #5F333B;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Khula-Regular';
+    src: url('/public/font/Khula-Regular.ttf') format('truetype'); 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 배경 이미지 */
+.login_back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: filter 0.3s ease; /* 필터 전환 부드럽게 */
+    
+}
+
+/* 로고 */
+.login_logo {
+    position: absolute;
+    z-index: 2;
+    top : 80px;
+    width: 200px;
+    height: 200px;
+}
+/* 로그인 폼을 배경 이미지 위 가운데로 */
+.login_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+
+/* 아이디 */
+#username{
+    position: absolute;
+    bottom : 105px; 
+    right: 2.5px;
+    width : 312px;
+    height: 56px;
+    background-color: #FFE898;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 아이디 포커스 시 그림자, 크기up*/
+#username:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);   
+}
+
+
+/* 비밀번호 */
+#password{
+    position: absolute;
+    bottom : 25px;
+    right: 2.5px;
+    width : 312px;
+    height: 56px;
+    background-color: #FFE898;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 비밀번호 포커스 시 그림자, 크기up*/
+#password:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.0);   
+}
+
+.id_find, .sign_up, .pw_find {
+    color: #4D4B4B; 
+    transition: transform 0.2s; 
+}
+
+.id_find:hover, .sign_up:hover, .pw_find:hover {
+    transform: scale(1.0); /* 커지는 효과 */
+    color: #4D4B4B; 
+}
+
+.id_find a, .sign_up a, .pw_find a {
+    text-decoration: none;
+    color: #4D4B4B; 
+}
+/*아이디 찾기*/
+.id_find {
+    position: absolute;
+    top: 233px;
+    left: 30px;
+    font-size: 14px;
+    font-family: 'Khula-Regular',sans-serif;
+}
+
+/*  회원가입 */
+.sign_up {
+    position: absolute;
+    right: 45px;
+    top: 233px;
+    font-size: 14px;
+    font-family: 'Khula-Regular',sans-serif;
+}
+
+/*  비밀번호 찾기 */
+.pw_find {
+    position: absolute;
+    right: 122px;
+    top: 233px;
+    font-size: 14px;
+    font-family: 'Khula-Regular',sans-serif;
+}
+
+/* 로그인 버튼 */
+.login_button {
+    position: absolute;
+    width: 327px;
+    height: 56px;
+    right: 5px;
+    top: 160px;
+    background-color: #FFB628;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease; 
+}
+
+/* 로그인 버튼 클릭 시 효과 */
+.login_button:active {
+    transform: scale(0.97); 
+    background-color: #e09c4d; 
+}
+
+
+.login_warning.show {
+    display: block; 
+}
+
+
+/* 경고 창 */
+.login_warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1001;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  /* 블러 사각형 */
+  #common_blur {
+    position: fixed;
+    display: none;
+    z-index: 2;
+    left: 566px;
+    top: 27px;
+    width: calc(100vw-150px); 
+    height: calc(100vh - 53px); 
+    backdrop-filter: blur(1px); 
+    pointer-events: none; 
+    transform: scaleX(0.93); 
+    transform-origin: center;
+}
+  
+ 

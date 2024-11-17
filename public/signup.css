@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Khula-Regular';
+    src: url('/public/font/Khula-Regular.ttf') format('truetype'); 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 배경 이미지 */
+.signup_back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+/* 회원가입 폼 */
+.signup_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    z-index: 2; /* 배경 위에 위치 */
+    padding: 20px 30px; /* 폼 내부 여백 */
+    border-radius: 15px; /* 둥근 모서리 */
+    text-align: center; /* 폼 내부 요소 중앙 정렬 */
+    max-width: 400px; /* 폼 최대 너비 */
+    width: 90%; /* 반응형 너비 */
+}
+
+/* 아이디 */
+#username{
+    position: absolute;
+    bottom : 202px;
+    right: 65px;
+    width : 312px;
+    height: 56px;
+    background-color: #FFE898;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 아이디 포커스 시 그림자, 크기up*/
+#username:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);   
+}
+
+/* 비밀번호 */
+#password{
+    position: absolute;
+    bottom : 100px;
+    right: 65px;
+    width : 312px;
+    height: 56px;
+    background-color: #FFE898;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 비밀번호 포커스 시 그림자, 크기up*/
+#password:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.0);   
+}
+
+/* 이메일 */
+#email{
+    position: absolute;
+    top : 115px;
+    right: 65px;
+    width : 312px;
+    height: 56px;
+    background-color: #FFE898;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 이메일 포커스 시 그림자, 크기up*/
+#email:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.0);   
+}
+
+/* 가입하기 버튼 */
+.signup_button {
+    position: absolute;
+    width: 327px;
+    height: 56px;
+    right: 65px;
+    top: 240px;
+    background-color:#FFB628;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease; 
+}
+
+.signup_button:active {
+    transform: scale(0.97); /* 눌린 상태로 크기 감소 */
+    background-color: #e09c4d; /* 눌렸을 때 배경 색상 변화 */
+}
+
+.signup_warning.show {
+    display: block; /* 로그인 실패 시 보이도록 설정 */
+}
+
+
+/* 경고 창 */
+.signup_warning {
+    position: fixed;
+    top: 50%;
+    left: 769.5px;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1001;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+
+/* 블러 사각형 */
+  #common_blur {
+    position: fixed;
+    display: none;
+    z-index: 2;
+    left: 566px;
+    top: 27px;
+    width: calc(100vw-150px); /* 뷰포트 전체 너비 */
+    height: calc(100vh - 53px); 
+    backdrop-filter: blur(1px); /* 블러 효과 */
+    pointer-events: none; /* 클릭 이벤트 무시 */
+    transform: scaleX(0.93); /*너비를 시각적으로 조금 줄이기 위해 transform 사용 */
+    transform-origin: center;
+}

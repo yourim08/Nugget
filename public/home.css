@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    width: 375px;
+    height: 812px;
+    background-color: #FCBF46;
+    position: relative;
+    overflow: hidden;
+}
+
+.header img {
+    position: absolute;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.nugget-text {
+    margin-top: 330px;
+    margin-left: 62px;
+}
+
+/*애니메이션*/
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* 페이지가 사라질 때 적용할 클래스 */
+.fade-out {
+    animation: fadeOut 1s ease-out forwards; /* 1초 동안 서서히 사라짐 */
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nugget</title>
+    <link rel="stylesheet" href="mypage.css">
+</head>
+
+<body>
+    <div class="frame">
+        <img src="common_img/common_fix.svg">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="interface">
+                <img src="mypage_img/mypage_interface.svg" alt="Interface">
+            </div>
+
+            <div class="information">
+                <img src="mypage_img/mypage_information.svg" alt="Information">
+            </div>
+
+            <div class="infocenter">
+                <img src="mypage_img/mypage_infocenter.svg" alt="Infocenter">
+            </div>
+            <div class="notice">
+                <img src="mypage_img/mypage_notice.svg" alt="Notice">
+            </div>
+            <div class="question">
+                <img src="mypage_img/mypage_question.svg" alt="Question">
+            </div>
+            <div class="ask">
+                <img src="mypage_img/mypage_ask.svg" alt="Ask">
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="bottom-bar">
+            <div class="icons">
+                <a href="dictionary.html">
+                    <img src="common_img/book_icon.svg" alt="Dictionary Icon" class="dectionary-icon">
+                </a>
+                <a href="list.html">
+                    <img src="common_img/list_icon.svg" alt="List Icon" class="list-icon">
+                </a>
+                <a href="main.html">
+                    <img src="common_img/home_icon.svg" alt="Main Icon" class="main-icon">
+                </a>
+                <a href="shop.html">
+                    <img src="common_img/shop_icon.svg" alt="Shop Icon" class="shop-icon">
+                </a>
+                <a href="mypage.html">
+                    <img src="common_img/mypagefull_icon.svg" alt="My Page Full Icon" class="mypage-icon">
+                </a>
+            </div>
+        </div>
+        <p class="count"></p>
+        <p class="dishCount">0</p>
+    </div>
+
+<script>
+function updateLearnCount() {
+  let localUpdatedList = localStorage.getItem('updatedList');
+  const jsonData = JSON.parse(localUpdatedList) || [];
+  
+  const learnFalseItems = jsonData.filter(item => item.learn === false || item.learn === "false" || item.learn === undefined);
+  let count = learnFalseItems.length-1;
+
+  console.log(learnFalseItems);
+  
+  document.querySelector('.count').textContent = count;
+}
+
+updateLearnCount();
+
+// updateDishCount 함수 정의
+function updateDishCount() {
+    let dishStates = JSON.parse(localStorage.getItem('dishStates')) || {}; // dishStates 객체 가져오기
+    let count = 1;
+
+    // dishStates 객체의 모든 값 확인
+    for (let key in dishStates) {
+        if (dishStates[key] === "hold" || dishStates[key] === "check") {
+            count++; // "hold" 또는 "check" 상태의 개수 증가
+        }
+    }
+
+    // <p class="dishCount"> 요소에 개수 업데이트
+    document.querySelector('.dishCount').textContent = count;
+}
+
+// 페이지 로드 시 개수 업데이트
+window.addEventListener('DOMContentLoaded', () => {
+    updateDishCount(); // 페이지 로드 시 updateDishCount 함수 호출
+});
+
+
+
+</script>
+
+</body>
+
+</html>

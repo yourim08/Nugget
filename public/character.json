@@ -1,0 +1,213 @@
+[
+  {
+      "name": "반죽이",
+      "img": "dictionary_img/dictionary_banjuk.svg",
+      "main_img": "main_img/main_character.svg",
+      "expain": "아직 튀겨지지 않은 반죽 상태이다.",
+      "clear": true,
+      "level": "Lv. 1"
+  },
+  {
+      "name": "너겟이",
+      "img": "dictionary_img/dictionary_nugeeti.svg",
+      "main_img": "main_img/main_nugeeti.svg",
+      "expain": "노릇노릇하게 튀겨진 상태이다.",
+      "level": "Lv. 2"
+  },
+  {
+      "name": "양념이",
+      "img": "dictionary_img/dictionary_yangnun.svg",
+      "main_img": "main_img/main_yangnun.svg",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 3"
+  },
+  {
+      "name": "이름3",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 4"
+  },
+  {
+      "name": "이름4",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 5"
+  },
+  {
+      "name": "이름5",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 6"
+  },
+  {
+      "name": "이름6",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 7"
+  },
+  {
+      "name": "이름7",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 8"
+  },
+  {
+      "name": "이름8",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 9"
+  },
+  {
+      "name": "이름9",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 10"
+  },
+  {
+      "name": "이름10",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 11"
+  },
+  {
+      "name": "이름11",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 12"
+  },
+  {
+      "name": "이름12",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 13"
+  },
+  {
+      "name": "이름13",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 14"
+  },
+  {
+      "name": "이름14",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 15"
+  },
+  {
+      "name": "이름15",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 16"
+  },
+  {
+      "name": "이름16",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 17"
+  },
+  {
+      "name": "이름17",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 18"
+  },
+  {
+      "name": "이름18",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 19"
+  },
+  {
+      "name": "이름19",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 20"
+  },
+  {
+      "name": "이름20",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 21"
+  },
+  {
+      "name": "이름21",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 22"
+  },
+  {
+      "name": "이름22",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 23"
+  },
+  {
+      "name": "이름23",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 24"
+  },
+  {
+      "name": "이름24",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 25"
+  },
+  {
+      "name": "이름25",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 26"
+  },
+  {
+      "name": "이름26",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 27"
+  },
+  {
+      "name": "이름27",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 28"
+  },
+  {
+      "name": "이름28",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 29"
+  },
+  {
+      "name": "이름29",
+      "img": "",
+      "main_img": "",
+      "expain": "캐릭터 설명",
+      "level": "Lv. 30"
+  }
+]
