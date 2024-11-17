@@ -49,14 +49,13 @@ app.post('/signup', (req, res) => {
     const query = 'INSERT INTO users (username, password, email) VALUES (?, ?, ?)';
     db.query(query, [username, hashedPassword, email], (err, result) => {
       if (err) {
-        // 여기서 400 상태 코드만 보내면 됩니다.
-        return res.status(400).send();
+        return res.status(400).send(); // 오류 발생 시 400 상태 코드
       }
-      // 성공 시 200 상태 코드 반환
-      res.status(200).send('회원가입 성공');
+      res.status(200).send(); // 회원가입 성공 시 아무 메시지 없이 200 상태 코드
     });
   });
 });
+
 // 로그인 처리
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
@@ -80,6 +79,5 @@ app.post('/login', (req, res) => {
   });
 
 app.listen(port, () => {
-  console.log(`서버가 http://localhost:${port}에서 실행 중입니다.`);
-
+  
 });

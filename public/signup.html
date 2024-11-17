@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원가입</title>
+  <title>signup</title>
   <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
-    <div class="frame">
-        <img src="common_img/common_fix.svg">
-    </div>
-  <h2>회원가입</h2>
-  <form id="signup_form">
-    <label for="username"></label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password"></label>
-    <input type="password" id="password" name="password" required><br><br>
-    <label for="email"></label>
-    <input type="email" id="email" name="email" required><br><br>
-    
-    <button type="submit" class="signup_button">가입하기</button>
-  </form>
-        <img src="signup_img/signup_back.svg" alt="Signup Back" class="signup_back">
-        <!-- 경고 이미지 & 블러 사각형 -->
-        <img src="signup_img/signup_warning.svg" alt="Warning" class="signup_warning">
-        <img src="common_img/common_blur.svg" alt="Blur" id="common_blur">
+  <div class="frame">
+    <img src="common_img/common_fix.svg">
+</div>
+  <!-- 회원가입 폼 -->
+  <div class="signup_form">
+    <form id="signup-form" action="/signup" method="POST">
+      <label for="username"></label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password"></label>
+      <input type="password" id="password" name="password" required><br><br>
+      <label for="email"></label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <button type="submit" class="signup_button">가입하기</button>
+    </form>
+  </div>
+  <img src="signup_img/signup_back.svg" alt="Signup Back" class="signup_back">
+  <!-- 경고 이미지 & 블러 효과 -->
+  <img src="signup_img/signup_warning.svg" alt="Signup Warning" class="signup_warning">
+  <img src="/common_img/common_blur.svg" alt="Blur" id="common_blur">
+
 
   <script>
-    document.getElementById('signup_form').addEventListener('submit', function(e) {
+    document.getElementById('signup-form').addEventListener('submit', function (e) {
       e.preventDefault();
       const formData = new FormData(this);
-
       fetch('/signup', {
         method: 'POST',
         body: new URLSearchParams(formData),
       })
-      .then(response => response.text())
-      .then(data => {
-      if (data.success) {
-        window.location.href = 'login.html';
-      } else {
-        showWarning();
-      }
-    })
-    .catch(error => {
-      showWarning();
+        .then(response => {
+          if (response.ok) {
+            // 회원가입 성공 시 바로 로그인 페이지로 이동
+            window.location.href = '/login.html';
+          } else {
+            showWarning(); // 실패 시 경고 이미지와 블러 효과 표시
+          }
+        })
+        .catch(error => {
+          showWarning(); // 실패 시 경고 이미지와 블러 효과 표시
+        });
     });
-});
-
+  
     // 경고 이미지 표시 및 블러 효과
-function showWarning() {
-  // 경고 이미지 다시 표시
-  document.querySelector('.signup_warning').style.display = 'block';
-  document.querySelector('.signup_warning').classList.add('show');
+    function showWarning() {
+      // 경고 이미지 다시 표시
+      document.querySelector('.signup_warning').style.display = 'block';
+      document.querySelector('.signup_warning').classList.add('show');
+      
+      // 블러 효과 표시
+      document.getElementById("common_blur").style.display = "block"; // Show blur
+    }
   
-  // 블러 효과 표시
-  document.getElementById("common_blur").style.display = "block"; // Show blur
+    // 경고 이미지나 오버레이 클릭 시 경고 숨기기 및 블러 해제
+    document.querySelector('.signup_warning').addEventListener("click", hideWarning);
   
-}
-
-// 경고 이미지나 오버레이 클릭 시 경고 숨기기 및 블러 해제
-document.querySelector('.signup_warning').addEventListener("click", hideWarning);
-
-
-function hideWarning() {
-  document.getElementById("common_blur").style.display = "none";
-  document.querySelector('.signup_warning').style.display = "none";
-  
-}
-
+    function hideWarning() {
+      document.getElementById("common_blur").style.display = "none";
+      document.querySelector('.signup_warning').style.display = "none";
+    }
   </script>
+  
 </body>
+
 </html>
