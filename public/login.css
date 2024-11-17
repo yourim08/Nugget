@@ -11,6 +11,18 @@ body {
     margin: 0;
 }
 
+
+/*프레임*/
+.frame{
+    position: absolute;
+    right: 616px;
+    width: 360px;
+    z-index: 1500;
+    transform: scaleX(0.98); 
+    transform-origin: center;
+    pointer-events: none;
+}
+
 /* 배경 이미지 */
 .login_back {
     position: absolute;
@@ -19,7 +31,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1;
     transition: filter 0.3s ease; /* 필터 전환 부드럽게 */
-    
+    border-radius: 30px;
 }
 
 /* 로고 */

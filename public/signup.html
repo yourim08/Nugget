@@ -1,139 +1,74 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shop.css">
-    <title>상점</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="signup.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="common_img/header.svg" alt="Header">
-        </div>
-        <img src="common_img/nugget_text.svg" alt="Nugget Text" class="nugget-text">
-       
-        <img src="shop_img/shop_sauce_box.svg" alt="sauce_box" class="sauce_box">
-        <p id="sauceTotalText"></p>
-        <div class="category-buttons">
-            <button class="category-btn" data-category="dish">접시</button>
-            <button class="category-btn" data-category="furniture">가구</button>
-            <button class="category-btn" data-category="decor">장식</button>
-        </div>
-
-        <div class="all_dishs" id="dish-items" style="display: none;">
-            <div class="dishs">
-                <div class="dish">
-                    <img src="shop_img/shop_white_dish.svg" alt="white dish" class="dish-img">
-                    <div class="rectangle"></div>
-                    <a href="#1" class="dish_state" data-id="1">
-                        <img src="shop_img/shop_hold.svg" alt="hold" class="hold">
-                        <h1 class="count">0</h1>
-                    </a>
-                </div>
-                <div class="dish">
-                    <img src="shop_img/shop_green_dish.svg" alt="green dish" class="dish-img">
-                    <div class="rectangle"></div>
-                    <a href="#2" class="dish_state" data-id="2">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">150</h1>
-                    </a>
-                </div>
-            </div>
-            <div class="dishs">
-                <div class="dish">
-                    <img src="shop_img/shop_blue_dish.svg" alt="blue dish" class="dish-img">
-                    <div class="rectangle"></div>
-                    <a href="#3" class="dish_state" data-id="3">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">200</h1>
-                    </a>
-                </div>
-                <div class="dish">
-                    <img src="shop_img/shop_yellow_dish.svg" alt="yellow dish" class="dish-img">
-                    <div class="rectangle"></div>
-                    <a href="#4" class="dish_state" data-id="4">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">300</h1>
-                    </a>
-                </div>
-            </div>
-            <div class="dishs">
-                <div class="dish">
-                    <img src="shop_img/shop_flower_dish.svg" alt="flower dish" class="dish-img flower-img">
-                    <div class="rectangle"></div>
-                    <a href="#5" class="dish_state" data-id="5">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">500</h1>
-                    </a>
-                </div>
-                <div class="dish">
-                    <img src="shop_img/shop_cat_dish.svg" alt="cat dish" class="dish-img">
-                    <div class="rectangle"></div>
-                    <a href="#6" class="dish_state" data-id="6">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">650</h1>
-                    </a>
-                </div>
-            </div>
-            <div class="dishs">
-                <div class="dish">
-                    <img src="shop_img/shop_space_dish.svg" alt="space dish" class="dish-img space-img">
-                    <div class="rectangle"></div>
-                    <a href="#7" class="dish_state" data-id="7">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">800</h1>
-                    </a>
-                </div>
-                <div class="dish">
-                    <img src="shop_img/shop_pan_dish.svg" alt="pan dish" class="dish-img pan-img">
-                    <div class="rectangle"></div>
-                    <a href="#8" class="dish_state" data-id="8">
-                        <img src="shop_img/shop_sauce.svg" alt="sauce" class="sauce">
-                        <h1 class="count">1000</h1>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="all_furniture" id="furniture-items" style="display: none;">
-            <!-- 가구 카테고리 아이템들 -->
-        </div>
-
-        <div class="all_decor" id="decor-items" style="display: none;">
-            <!-- 장식 카테고리 아이템들 -->
-        </div>
-
-        <!-- 푸터 -->
-        <div class="bottom-bar">
-            <div class="icons">
-                <a href="dictionary.html">
-                    <img src="common_img/book_icon.svg" alt="Dictionary Icon" class="dictionary-icon">
-                </a>
-                <a href="list.html">
-                    <img src="common_img/list_icon.svg" alt="List Icon" class="list-icon">
-                </a>
-                <a href="main.html">
-                    <img src="common_img/home_icon.svg" alt="Main Icon" id="main-icon">
-                </a>
-                <a href="shop.html">
-                    <img src="shop_img/shop_icon_full.svg" alt="Shop Icon" class="shop-icon">
-                </a>
-                <a href="mypage.html">
-                    <img src="common_img/mypage_icon.svg" alt="My Page Icon" class="mypage-icon">
-                </a>
-            </div>
-        </div>
-
-         <!-- 경고 이미지 & 블러 사각형 -->
-         <img src="signup_img/signup_warning.svg" alt="Warning" id="warning-image">
-         <img src="common_img/common_blur.svg" alt="Blur" id="common_blur">
-        
+    <div class="frame">
+        <img src="common_img/common_fix.svg">
     </div>
+  <h2>회원가입</h2>
+  <form id="signup_form">
+    <label for="username"></label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password"></label>
+    <input type="password" id="password" name="password" required><br><br>
+    <label for="email"></label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <button type="submit" class="signup_button">가입하기</button>
+  </form>
+        <img src="signup_img/signup_back.svg" alt="Signup Back" class="signup_back">
+        <!-- 경고 이미지 & 블러 사각형 -->
+        <img src="signup_img/signup_warning.svg" alt="Warning" class="signup_warning">
+        <img src="common_img/common_blur.svg" alt="Blur" id="common_blur">
 
-    <script src="shop.js"></script>
+  <script>
+    document.getElementById('signup_form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
 
+      fetch('/signup', {
+        method: 'POST',
+        body: new URLSearchParams(formData),
+      })
+      .then(response => response.text())
+      .then(data => {
+      if (data.success) {
+        window.location.href = 'login.html';
+      } else {
+        showWarning();
+      }
+    })
+    .catch(error => {
+      showWarning();
+    });
+});
+
+    // 경고 이미지 표시 및 블러 효과
+function showWarning() {
+  // 경고 이미지 다시 표시
+  document.querySelector('.signup_warning').style.display = 'block';
+  document.querySelector('.signup_warning').classList.add('show');
+  
+  // 블러 효과 표시
+  document.getElementById("common_blur").style.display = "block"; // Show blur
+  
+}
+
+// 경고 이미지나 오버레이 클릭 시 경고 숨기기 및 블러 해제
+document.querySelector('.signup_warning').addEventListener("click", hideWarning);
+
+
+function hideWarning() {
+  document.getElementById("common_blur").style.display = "none";
+  document.querySelector('.signup_warning').style.display = "none";
+  
+}
+
+  </script>
 </body>
-
 </html>

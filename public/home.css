@@ -6,6 +6,17 @@ body {
     margin: 0;
 }
 
+/*프레임*/
+.frame{
+    position: absolute;
+    right: 616px;
+    width: 360px;
+    z-index: 1500;
+    transform: scaleX(0.98); 
+    transform-origin: center;
+    pointer-events: none;
+}
+
 .container {
     position: absolute;
     width: 375px;
@@ -13,6 +24,7 @@ body {
     background-color: #FCBF46;
     position: relative;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 .header img {
