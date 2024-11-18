@@ -62,7 +62,7 @@ body {
 
 #score {
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 20px;
     font-size: 24px;
     color: #333;
@@ -73,7 +73,7 @@ body {
 #high-score {
     z-index: 2; /* high score를 점수와 동일하게 앞에 배치 */
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 20px;
     font-size: 18px;
     color: #555;
