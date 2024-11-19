@@ -68,9 +68,6 @@ window.addEventListener('load', function () {
         "7": "main_img/main_space_dish.svg",
         "8": "main_img/main_pan_dish.svg",
     };
-
-
-
     let idx = localStorage.getItem("dish");
     if (!idx) {
         idx = "1";
@@ -78,6 +75,15 @@ window.addEventListener('load', function () {
 
     const plateImage = document.querySelector('#plate');
     plateImage.src = nnn[idx];
+
+    plateImage.alt = `Image ${idx}`; // alt 텍스트 동적 변경
+
+    // "8"번일 때만 특별한 클래스 추가
+    if (idx === "8") {
+        plateImage.classList.add("special-dish");
+    } else {
+        plateImage.classList.remove("special-dish");
+    }
 
     document.querySelector('.main-sauce-count').innerText = sauceTotal;
 

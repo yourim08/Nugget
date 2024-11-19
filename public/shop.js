@@ -17,16 +17,25 @@ document.querySelectorAll('.dish_state').forEach(dish => {
     const state = dishStates[dishId];
 
     const currentImage = dish.querySelector('img');
-    if (state === 'check') {
-        currentImage.src = 'shop_img/shop_check.svg'; // 체크 이미지로 설정
-        currentImage.className = "check";
-        dish.querySelector('.count').innerText = '0'; // 카운트 0으로 설정
-        dish.querySelector('.count').style.display = 'none'; // 카운트 숨김
-    } else if (state === 'hold') {
-        currentImage.src = 'shop_img/shop_hold.svg'; // 홀드 이미지로 설정
-        currentImage.className = "hold";
+    const countElement = dish.querySelector('.count');
+
+    // 홀드 상태 또는 체크 상태일 때 count 값을 0으로 고정
+    if (state === 'check' || state === 'hold') {
+        currentImage.src = (state === 'check') ? 'shop_img/shop_check.svg' : 'shop_img/shop_hold.svg';
+        currentImage.className = state;
+        countElement.innerText = '0'; // count 값을 0으로 설정
+        countElement.style.display = 'none'; // 카운트 숨김
+
+        // 로컬 스토리지에도 count 값을 0으로 저장
+        localStorage.setItem(`count_${dishId}`, '0');
+    } else {
+        // 다른 상태에서는 로컬 스토리지에서 count 값을 불러옴
+        let count = localStorage.getItem(`count_${dishId}`) || countElement.innerText;
+        countElement.innerText = count;
+        countElement.style.display = (count === '0') ? 'none' : 'block';
     }
 });
+
 
 // 경고 이미지와 블러를 제어하는 함수
 function showWarning() {
